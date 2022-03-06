@@ -87,20 +87,21 @@ actor {
 
     public func selection_sort(array:[Nat]):async [Nat]{
         // Challenge 10
-        for (i in Iter.range(0,array.size()-1)) {
+       var array1:[var Nat] = Array.thaw(array);
+        for (i in Iter.range(0,array1.size()-1)) {
             var min:Nat=i;
-            for(j in Iter.range(i+1,array.size()-1)){
-                if(array[j] < array[min]){
+            for(j in Iter.range(i+1,array1.size()-1)){
+                if(array1[j] < array1[min]){
                     min:=j;
                 }
             };
             if(min!=i){
-                let temp = array[min];
-                array[min]:=array[i];
-                array[i]:=temp;
+                let temp = array1[min];
+                array1[min]:=array1[i];
+                array1[i]:=temp;
             }
         };
-        return array;
+        return Array.freeze<Nat>(array1);
     };
 
 };
