@@ -1,0 +1,13 @@
+service : {
+  bubble_sort: (vec nat) -> (vec nat);
+  capitalize_character: (nat32) -> (nat32);
+  capitalize_text: (text) -> (text);
+  decimal_to_bits: (nat) -> (text);
+  duplicated_character: (text) -> (text);
+  is_inside: (text, nat32) -> (bool);
+  max_number_with_n_bits: (nat) -> (nat);
+  nat_to_nat8: (nat) -> (nat8);
+  size_in_bytes: (text) -> (nat);
+  trim_whitespace: (text) -> (text);
+  unicode_to_character: (nat32) -> (text);
+}
