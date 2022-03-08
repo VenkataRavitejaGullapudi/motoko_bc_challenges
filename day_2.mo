@@ -91,7 +91,12 @@ actor{
 
     // Challenge 9
     public func size_in_bytes(t:Text):async Nat{
-        return Text.encodeUtf8(t).size();
+        let text:Blob = Text.encodeUtf8(t);
+        var count=0;
+        for(val in text.vals()){
+            count += Nat8.toText(val).size();
+        };
+        return count;
     };
 
     // Challenge 10
