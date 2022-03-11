@@ -18,7 +18,15 @@
         },
         "day_5": {
             "type": "motoko",
-            "main": "day_4/main.mo"
+            "main": "day_5.mo"
+        },
+        "day_6": {
+            "type": "motoko",
+            "main": "day_6/main.mo"
+        },
+        "day_6_2": {
+            "type": "motoko",
+            "main": "day_6/second.mo"
         }
     },
     "defaults": {
