@@ -2,6 +2,7 @@ import HashMap "mo:base/HashMap";
 import Iter "mo:base/Iter";
 import Option "mo:base/Option";
 import Principal "mo:base/Principal";
+import Cycles "mo:base/ExperimentalCycles";
 
 
 actor {
@@ -41,14 +42,16 @@ actor {
          return favoriteNumber.remove(caller);
     };
 
-    // Challenge 6 Pending
-    // public func deposit_cycles():async Nat{
-       
-    // };
 
-    // Challenge 7 pending
+    // Challenge 6
+    public func deposit_cycles():async Nat{
+       return Cycles.accept(Cycles.available());
+    };
 
-
+    // Challenge 7
+    public shared({caller}) func withdraw_cycles(n:Nat):async (){
+        let canister_id =  "";
+    };
 
     // Challenge 8
     stable var counter:Nat = 0;
